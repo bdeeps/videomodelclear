@@ -1,0 +1,998 @@
+{
+ "title": "The history of AI video models",
+ "tagline": "From a row of cameras photographing a galloping horse in 1878 to models that turn a sentence into a talking film clip, and the rules that followed.",
+ "intro": "Video has always been a stack of still pictures shown quickly. For decades computers could only play such stacks back. Then networks learned to invent images, diffusion learned to turn static into pictures, and transformers learned to handle patches of space and time together. By 2024 a sentence could become a realistic clip, and governments, India among them, began requiring labels on AI-made video.",
+ "eras": [
+  {
+   "id": "motion",
+   "name": "Moving pictures",
+   "from": 1878,
+   "to": 2012,
+   "color": "#c49bff",
+   "summary": "Photographers and film-makers learn that motion is just many still pictures shown quickly, and settle on 24 of them per second."
+  },
+  {
+   "id": "learn",
+   "name": "Networks learn to imagine",
+   "from": 2013,
+   "to": 2019,
+   "color": "#ffb547",
+   "summary": "Neural networks learn to invent images and the first tiny videos, and face-swapped \"deepfakes\" appear."
+  },
+  {
+   "id": "noise",
+   "name": "From noise to pictures",
+   "from": 2020,
+   "to": 2022,
+   "color": "#8ef0ff",
+   "summary": "Diffusion turns static into images, works in a compressed latent space, follows prompts and starts making short videos."
+  },
+  {
+   "id": "video",
+   "name": "Video for everyone",
+   "from": 2023,
+   "to": 2026,
+   "color": "#7be08c",
+   "summary": "Text-to-video tools reach the public, clips get longer, sharper and gain sound, and their cost becomes clear."
+  },
+  {
+   "id": "rules",
+   "name": "Labels and laws",
+   "from": 2023,
+   "to": 2026,
+   "color": "#ffd166",
+   "summary": "Watermarks, content credentials and new laws in India, China and Europe try to make AI video easy to recognise."
+  }
+ ],
+ "events": [
+  {
+   "year": 1878,
+   "date": "19 June 1878",
+   "era": "motion",
+   "art": "horse",
+   "key": true,
+   "title": "A galloping horse, frame by frame",
+   "who": "Eadweard Muybridge",
+   "where": "Palo Alto, California, United States",
+   "country": "United States",
+   "text": "Muybridge lined up a row of cameras along a racetrack, each fired by a thread as the horse ran past. The sequence proved that all four hooves leave the ground at once. Shown quickly one after another, the still photos looked like motion.",
+   "why": "It showed that movement can be stored as a stack of still pictures, the idea every video still uses.",
+   "box": "stack",
+   "sources": [
+    0,
+    1
+   ]
+  },
+  {
+   "year": 1927,
+   "date": "c. 1927",
+   "era": "motion",
+   "art": "filmreel",
+   "key": false,
+   "title": "24 frames every second",
+   "who": "The film industry, with the arrival of sound films",
+   "where": "United States",
+   "country": "United States",
+   "text": "When films gained soundtracks in the late 1920s, projectors had to run at one steady speed so voices sounded right. The industry settled on 24 frames per second, which is still the standard for cinema.",
+   "why": "A single minute of film is 1,440 separate pictures, which is why video is so much bigger than one image.",
+   "box": "stack",
+   "sources": [
+    2
+   ]
+  },
+  {
+   "year": 2014,
+   "date": "June 2014",
+   "era": "learn",
+   "art": "neuralnet",
+   "key": true,
+   "title": "Two networks play a game",
+   "who": "Ian Goodfellow and colleagues",
+   "where": "Université de Montréal, Canada",
+   "country": "Canada",
+   "text": "In a generative adversarial network (GAN), one network makes fake images and another tries to spot them. Each gets better by competing with the other. A year earlier, Kingma and Welling had shown the variational autoencoder, another way to generate pictures.",
+   "why": "For the first time, networks could invent new, realistic-looking images instead of only sorting them.",
+   "box": "",
+   "sources": [
+    4,
+    3
+   ]
+  },
+  {
+   "year": 2015,
+   "date": "March 2015",
+   "era": "learn",
+   "art": "pixels",
+   "key": false,
+   "title": "Learning to undo noise",
+   "who": "Jascha Sohl-Dickstein, Eric Weiss, Niru Maheswaranathan and Surya Ganguli",
+   "where": "Stanford University, United States",
+   "country": "United States",
+   "text": "Borrowing an idea from physics, the team slowly destroyed images by adding noise, then trained a network to run the process backwards. The results were blurry and the idea was mostly ignored for five years.",
+   "why": "It was the seed of diffusion, the method behind most video models today.",
+   "box": "diffusion",
+   "sources": [
+    5
+   ]
+  },
+  {
+   "year": 2016,
+   "date": "September 2016",
+   "era": "learn",
+   "art": "film",
+   "key": true,
+   "title": "The first tiny AI videos",
+   "who": "Carl Vondrick, Hamed Pirsiavash and Antonio Torralba",
+   "where": "MIT, Cambridge, United States",
+   "country": "United States",
+   "text": "Trained on over two million unlabelled videos, VGAN generated clips of 32 frames at 64 by 64 pixels, up to about a second long. It learned to draw a still background and a moving foreground separately. The paper appeared at NeurIPS 2016.",
+   "why": "It showed a network could learn how scenes move, not just how they look.",
+   "box": "stack",
+   "sources": [
+    6
+   ]
+  },
+  {
+   "year": 2017,
+   "date": "late 2017",
+   "era": "learn",
+   "art": "person",
+   "key": false,
+   "title": "The word \"deepfake\"",
+   "who": "An anonymous Reddit user",
+   "where": "Online",
+   "country": "United States",
+   "text": "A user called \"deepfakes\" posted videos in which one person's face had been swapped onto another's using neural networks, and shared the code. The name stuck for any AI-faked video. Most early deepfakes targeted women without their consent.",
+   "why": "Faked video became a public worry years before text-to-video models existed.",
+   "box": "trust",
+   "sources": [
+    7
+   ]
+  },
+  {
+   "year": 2020,
+   "date": "June 2020",
+   "era": "noise",
+   "art": "pixels",
+   "key": true,
+   "title": "Diffusion finally works",
+   "who": "Jonathan Ho, Ajay Jain and Pieter Abbeel",
+   "where": "UC Berkeley, United States",
+   "country": "United States",
+   "text": "Denoising diffusion probabilistic models (DDPM) trained a network to predict the noise hidden in a picture, then removed it step by step, starting from pure static. The images matched the best GANs, and training was much more stable.",
+   "why": "Almost every image and video generator since is built on this recipe.",
+   "box": "diffusion",
+   "sources": [
+    8
+   ]
+  },
+  {
+   "year": 2021,
+   "date": "22 February 2021",
+   "era": "noise",
+   "art": "scales",
+   "key": false,
+   "title": "A label that travels with the file",
+   "who": "Adobe, Arm, BBC, Intel, Microsoft and Truepic",
+   "where": "United States and United Kingdom",
+   "country": "International",
+   "text": "Six organisations formed the Coalition for Content Provenance and Authenticity (C2PA) to write an open standard for \"content credentials\": signed records, attached to a file, of who made it and how it was edited. Many AI tools later used it to mark their output.",
+   "why": "It gave the world a shared way to say where a picture or video came from.",
+   "box": "trust",
+   "sources": [
+    9,
+    10
+   ]
+  },
+  {
+   "year": 2021,
+   "date": "December 2021",
+   "era": "noise",
+   "art": "digital",
+   "key": false,
+   "title": "Do the work in a smaller space",
+   "who": "Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser and Björn Ommer",
+   "where": "LMU Munich and Heidelberg University, Germany",
+   "country": "Germany",
+   "text": "Instead of denoising every pixel, latent diffusion first squeezes an image with an autoencoder into a much smaller grid of numbers, the \"latent\". Diffusion happens there, and a decoder turns the result back into pixels. This cut the cost dramatically.",
+   "why": "Video models compress in the same way, in both space and time, or they could never afford to run.",
+   "box": "latent",
+   "sources": [
+    11
+   ]
+  },
+  {
+   "year": 2021,
+   "date": "December 2021",
+   "era": "noise",
+   "art": "word",
+   "key": false,
+   "title": "Turning up the prompt",
+   "who": "Jonathan Ho and Tim Salimans",
+   "where": "Google, United States",
+   "country": "United States",
+   "text": "Classifier-free guidance trains one model both with and without the text prompt. At each step it pushes the picture further in the direction the prompt suggests. First shown at a NeurIPS workshop, it was posted on arXiv in July 2022.",
+   "why": "It is the \"follow the prompt more closely\" dial inside nearly every text-to-image and text-to-video model.",
+   "box": "prompt",
+   "sources": [
+    12
+   ]
+  },
+  {
+   "year": 2022,
+   "date": "April 2022",
+   "era": "noise",
+   "art": "film",
+   "key": false,
+   "title": "Diffusion for video",
+   "who": "Jonathan Ho, Tim Salimans, Alexey Gritsenko, William Chan, Mohammad Norouzi and David Fleet",
+   "where": "Google, United States",
+   "country": "United States",
+   "text": "Video Diffusion Models denoised all the frames of a short clip together, so each frame could \"see\" its neighbours. This kept objects steadier from frame to frame than making each frame separately.",
+   "why": "Denoising frames together is the main trick for keeping video consistent.",
+   "box": "consistent",
+   "sources": [
+    13
+   ]
+  },
+  {
+   "year": 2022,
+   "date": "22 August 2022",
+   "era": "noise",
+   "art": "share",
+   "key": true,
+   "title": "Stable Diffusion is released openly",
+   "who": "Stability AI, CompVis at LMU Munich and Runway",
+   "where": "Munich, Germany and London, United Kingdom",
+   "country": "Germany and United Kingdom",
+   "text": "A latent diffusion model trained on billions of captioned images was released with its weights, so anyone with a gaming graphics card could run it at home. Thousands of tools and many later open video models were built on it.",
+   "why": "Image generation went from lab demo to something millions of people could use and study.",
+   "box": "latent",
+   "sources": [
+    14,
+    11
+   ]
+  },
+  {
+   "year": 2022,
+   "date": "29 September 2022",
+   "era": "noise",
+   "art": "film",
+   "key": false,
+   "title": "Make-A-Video",
+   "who": "Uriel Singer, Adam Polyak, Devi Parikh, Yaniv Taigman and colleagues at Meta AI",
+   "where": "Tel Aviv, Israel and Menlo Park, United States",
+   "country": "Israel and United States",
+   "text": "Meta's team took a text-to-image model and taught it motion from videos that had no captions at all. It produced short, low-resolution clips from a sentence.",
+   "why": "It showed video models could borrow what image models already knew about the world.",
+   "box": "prompt",
+   "sources": [
+    15
+   ]
+  },
+  {
+   "year": 2022,
+   "date": "5 October 2022",
+   "era": "noise",
+   "art": "cinema",
+   "key": false,
+   "title": "Imagen Video",
+   "who": "Jonathan Ho, William Chan, Chitwan Saharia and colleagues at Google",
+   "where": "Mountain View, United States",
+   "country": "United States",
+   "text": "A chain of seven diffusion models first made a small, jerky clip, then filled in extra frames and added detail. The paper reports 128 frames at 1280 by 768 pixels and 24 frames per second, about 5.3 seconds.",
+   "why": "It reached HD resolution by building a clip up in stages.",
+   "box": "consistent",
+   "sources": [
+    16
+   ]
+  },
+  {
+   "year": 2022,
+   "date": "December 2022",
+   "era": "noise",
+   "art": "llm",
+   "key": false,
+   "title": "Diffusion meets the transformer",
+   "who": "William Peebles and Saining Xie",
+   "where": "UC Berkeley and New York University, United States",
+   "country": "United States",
+   "text": "The diffusion transformer (DiT) cut the latent into small patches and processed them with a transformer, the same design behind chatbots. Bigger transformers gave better pictures, predictably.",
+   "why": "This design, scaled up to patches of space and time, became the backbone of Sora and many later video models.",
+   "box": "latent",
+   "sources": [
+    17
+   ]
+  },
+  {
+   "year": 2023,
+   "date": "20 March 2023",
+   "era": "video",
+   "art": "clapper",
+   "key": false,
+   "title": "Text-to-video anyone can try",
+   "who": "Runway",
+   "where": "New York, United States",
+   "country": "United States",
+   "text": "Runway announced Gen-2, which made short clips of about four seconds from a text prompt or an image. It opened to the public in stages over the following months and was widely described as the first publicly available text-to-video model.",
+   "why": "Artists and students began experimenting with AI video themselves.",
+   "box": "prompt",
+   "sources": [
+    18,
+    19
+   ]
+  },
+  {
+   "year": 2023,
+   "date": "29 August 2023",
+   "era": "rules",
+   "art": "eye",
+   "key": false,
+   "title": "An invisible watermark",
+   "who": "Google DeepMind",
+   "where": "London, United Kingdom",
+   "country": "United Kingdom",
+   "text": "SynthID hid a signal inside AI-made images from Google's Imagen model. People cannot see it, but a detector can find it, even after cropping or compression. In May 2024 Google said it would extend SynthID to video made by Veo.",
+   "why": "Watermarks inside the pixels can survive where a visible label is easily cropped off.",
+   "box": "trust",
+   "sources": [
+    20,
+    29
+   ]
+  },
+  {
+   "year": 2023,
+   "date": "26 December 2023",
+   "era": "rules",
+   "art": "phone",
+   "key": true,
+   "title": "India warns platforms about deepfakes",
+   "who": "Ministry of Electronics and Information Technology (MeitY)",
+   "where": "New Delhi, India",
+   "country": "India",
+   "text": "In November 2023 a deepfake video of a well-known actor spread widely, and ministers called deepfakes a dangerous form of misinformation. In December MeitY advised all platforms to tell users clearly, at sign-up and when they upload, that impersonation and deceptive content are banned under the IT Rules.",
+   "why": "India began treating deepfakes as a problem platforms must actively deal with.",
+   "box": "trust",
+   "sources": [
+    22,
+    23,
+    21
+   ]
+  },
+  {
+   "year": 2024,
+   "date": "15 February 2024",
+   "era": "video",
+   "art": "cinema",
+   "key": true,
+   "title": "Sora: up to a minute of video",
+   "who": "OpenAI",
+   "where": "San Francisco, United States",
+   "country": "United States",
+   "text": "OpenAI showed Sora, which it reported could make videos up to one minute long. Its technical report described compressing video into a latent space and cutting it into \"spacetime patches\" for a diffusion transformer. It was not released to the public at first.",
+   "why": "It showed how far scaling a diffusion transformer on video could go, and set off a race.",
+   "box": "latent",
+   "sources": [
+    26,
+    27
+   ]
+  },
+  {
+   "year": 2024,
+   "date": "1 and 15 March 2024",
+   "era": "rules",
+   "art": "scales",
+   "key": false,
+   "title": "Labels for AI-made content in India",
+   "who": "Ministry of Electronics and Information Technology (MeitY)",
+   "where": "New Delhi, India",
+   "country": "India",
+   "text": "A 1 March advisory asked platforms to seek government permission before offering untested AI models, and to mark AI-made content that could be used as a deepfake with a permanent unique identifier or metadata. After criticism, a 15 March advisory dropped the permission step but kept the call for labels.",
+   "why": "It was India's first push for AI content labels, a step towards later rules.",
+   "box": "trust",
+   "sources": [
+    24,
+    25
+   ]
+  },
+  {
+   "year": 2024,
+   "date": "14 May 2024",
+   "era": "video",
+   "art": "earth",
+   "key": false,
+   "title": "Veo, with watermarks built in",
+   "who": "Google DeepMind",
+   "where": "Mountain View, United States",
+   "country": "United States",
+   "text": "Google announced Veo, which it reported could make 1080p videos beyond a minute long. Its videos were to carry SynthID watermarks. Veo 2 followed in December 2024.",
+   "why": "Big labs began shipping watermarking alongside video models.",
+   "box": "trust",
+   "sources": [
+    28,
+    29,
+    34
+   ]
+  },
+  {
+   "year": 2024,
+   "date": "6 June 2024",
+   "era": "video",
+   "art": "phone",
+   "key": false,
+   "title": "Kling from China",
+   "who": "Kuaishou",
+   "where": "Beijing, China",
+   "country": "China",
+   "text": "Kuaishou, a short-video company, launched Kling for testing in China. It reported clips up to two minutes long at 1080p and 30 frames per second. Kling soon opened to users around the world.",
+   "why": "Strong video models were now coming from several countries, not one lab.",
+   "box": "consistent",
+   "sources": [
+    30,
+    31,
+    48
+   ]
+  },
+  {
+   "year": 2024,
+   "date": "December 2024",
+   "era": "video",
+   "art": "share",
+   "key": false,
+   "title": "Sora opens, and open models catch up",
+   "who": "OpenAI; Tencent",
+   "where": "San Francisco, United States and Shenzhen, China",
+   "country": "United States and China",
+   "text": "On 9 December OpenAI opened Sora to paying users in some countries, with clips up to 1080p and 20 seconds. The same month Tencent released HunyuanVideo, a 13-billion-parameter model with openly published weights, after Tsinghua University and Zhipu AI's open CogVideoX in August.",
+   "why": "Anyone could now study how a large video model is built, not just use one.",
+   "box": "latent",
+   "sources": [
+    33,
+    47,
+    46
+   ]
+  },
+  {
+   "year": 2025,
+   "date": "20 May 2025",
+   "era": "video",
+   "art": "clapper",
+   "key": true,
+   "title": "Pictures and sound in one go",
+   "who": "Google DeepMind",
+   "where": "Mountain View, United States",
+   "country": "United States",
+   "text": "Google announced Veo 3, which generated speech, sound effects and music together with the video in a single model. Widely shared clips of talking characters made it hard to tell AI video from real footage at a glance.",
+   "why": "Realistic talking video made labels and provenance more urgent.",
+   "box": "trust",
+   "sources": [
+    34
+   ]
+  },
+  {
+   "year": 2025,
+   "date": "May and September 2025",
+   "era": "video",
+   "art": "plug",
+   "key": false,
+   "title": "Counting the energy of a video",
+   "who": "MIT Technology Review; Hugging Face researchers",
+   "where": "United States and Canada",
+   "country": "United States and Canada",
+   "text": "Measurements on one open model found a 5-second clip used about 3.4 million joules, more than 700 times a high-quality image. A Hugging Face study found that doubling a video's length roughly quadruples the energy needed.",
+   "why": "Video is the most energy-hungry thing most people ask AI to make.",
+   "box": "trust",
+   "sources": [
+    40,
+    41
+   ]
+  },
+  {
+   "year": 2025,
+   "date": "1 September 2025",
+   "era": "rules",
+   "art": "scales",
+   "key": false,
+   "title": "China requires AI labels",
+   "who": "Cyberspace Administration of China and three other agencies",
+   "where": "Beijing, China",
+   "country": "China",
+   "text": "China's labelling measures took effect, requiring visible labels on AI-made content such as video, plus hidden labels in the file's data. In Europe, the AI Act's Article 50 requires AI-made deepfakes to be disclosed, with those rules applying from August 2026.",
+   "why": "Several large markets moved from asking to requiring AI labels.",
+   "box": "trust",
+   "sources": [
+    37,
+    36
+   ]
+  },
+  {
+   "year": 2025,
+   "date": "30 September 2025",
+   "era": "video",
+   "art": "phone",
+   "key": false,
+   "title": "Sora 2 and an app",
+   "who": "OpenAI",
+   "where": "San Francisco, United States",
+   "country": "United States",
+   "text": "OpenAI released Sora 2, which added synchronised speech and sound, in a social app where people could put themselves into videos. It spread quickly, and so did complaints about copyright and look-alike videos of real people.",
+   "why": "AI video became something people shared in a feed, raising new questions about consent.",
+   "box": "trust",
+   "sources": [
+    35,
+    27
+   ]
+  },
+  {
+   "year": 2025,
+   "date": "22 October 2025",
+   "era": "rules",
+   "art": "word",
+   "key": false,
+   "title": "India drafts rules for synthetic media",
+   "who": "Ministry of Electronics and Information Technology (MeitY)",
+   "where": "New Delhi, India",
+   "country": "India",
+   "text": "MeitY published draft amendments to the IT Rules defining \"synthetically generated information\". The draft proposed that visible labels cover at least 10% of the screen, or play during the first 10% of an audio clip, and asked the public for comments.",
+   "why": "It was the first draft Indian law written specifically about AI-made media.",
+   "box": "trust",
+   "sources": [
+    38,
+    39
+   ]
+  },
+  {
+   "year": 2026,
+   "date": "10 February 2026",
+   "era": "rules",
+   "art": "scales",
+   "key": true,
+   "title": "India's deepfake rules become law",
+   "who": "Ministry of Electronics and Information Technology (MeitY)",
+   "where": "New Delhi, India",
+   "country": "India",
+   "text": "The amended IT Rules, in force from 20 February 2026, require AI-made audio and video to carry a prominent label and metadata that platforms must not strip. The fixed 10% size was dropped. Platforms must remove unlawful content within 3 hours of a lawful order, and non-consensual intimate images, including deepfakes, within 2 hours.",
+   "why": "India now has some of the world's strictest labelling and takedown rules for AI video.",
+   "box": "trust",
+   "sources": [
+    42,
+    43,
+    44
+   ]
+  },
+  {
+   "year": 2026,
+   "date": "24 March 2026",
+   "era": "video",
+   "art": "plug",
+   "key": false,
+   "title": "Sora is switched off",
+   "who": "OpenAI",
+   "where": "San Francisco, United States",
+   "country": "United States",
+   "text": "OpenAI announced it would close the Sora app, which shut on 26 April 2026, with the API ending in September. News reports pointed to very high running costs and problems with copyright and deepfakes.",
+   "why": "Making video is expensive, and even a famous product could not cover its costs.",
+   "box": "trust",
+   "sources": [
+    49,
+    45
+   ]
+  }
+ ],
+ "firsts": [
+  {
+   "label": "Motion captured as a sequence of photographs",
+   "value": "1878",
+   "who": "Eadweard Muybridge, United States"
+  },
+  {
+   "label": "Generative adversarial network",
+   "value": "2014",
+   "who": "Ian Goodfellow and colleagues, Canada"
+  },
+  {
+   "label": "Neural network that generated short videos from scratch",
+   "value": "2016",
+   "who": "VGAN, Vondrick, Pirsiavash and Torralba, United States"
+  },
+  {
+   "label": "Diffusion model for video",
+   "value": "2022",
+   "who": "Video Diffusion Models, Ho and colleagues, Google"
+  },
+  {
+   "label": "Widely described as the first publicly available text-to-video model",
+   "value": "2023",
+   "who": "Runway Gen-2, United States"
+  },
+  {
+   "label": "Open standard for content credentials",
+   "value": "2021",
+   "who": "C2PA, founded by Adobe, Arm, BBC, Intel, Microsoft and Truepic"
+  },
+  {
+   "label": "Indian rules requiring labels on AI-made media",
+   "value": "2026",
+   "who": "IT Amendment Rules, MeitY, India"
+  }
+ ],
+ "people": [
+  {
+   "name": "Eadweard Muybridge",
+   "life": "1830 – 1904",
+   "role": "Photographer",
+   "from": "England and United States",
+   "note": "Photographed a galloping horse with a row of cameras in 1878, showing motion as a sequence of stills."
+  },
+  {
+   "name": "Ian Goodfellow",
+   "life": "",
+   "role": "Computer scientist",
+   "from": "United States",
+   "note": "Invented generative adversarial networks in 2014, which powered early image generators, video GANs and deepfakes."
+  },
+  {
+   "name": "Jascha Sohl-Dickstein",
+   "life": "",
+   "role": "Physicist and computer scientist",
+   "from": "United States",
+   "note": "Led the 2015 paper that first used diffusion, adding and removing noise, to generate images."
+  },
+  {
+   "name": "Jonathan Ho",
+   "life": "",
+   "role": "Computer scientist",
+   "from": "United States",
+   "note": "Lead author of DDPM (2020), classifier-free guidance and the first video diffusion papers."
+  },
+  {
+   "name": "Robin Rombach",
+   "life": "",
+   "role": "Computer scientist",
+   "from": "Germany",
+   "note": "Lead author of latent diffusion, the compressed-space method behind Stable Diffusion and most video models."
+  },
+  {
+   "name": "Saining Xie",
+   "life": "",
+   "role": "Computer scientist, New York University",
+   "from": "China and United States",
+   "note": "Co-created the diffusion transformer (DiT) with William Peebles, the design later scaled up for video."
+  },
+  {
+   "name": "Devi Parikh",
+   "life": "",
+   "role": "Computer scientist, Meta AI",
+   "from": "United States",
+   "note": "A research director on Make-A-Video (2022), one of the first text-to-video diffusion systems."
+  },
+  {
+   "name": "Sasha Luccioni",
+   "life": "",
+   "role": "AI and climate researcher, Hugging Face",
+   "from": "Canada",
+   "note": "Co-wrote the 2025 study showing that doubling an AI video's length roughly quadruples its energy use."
+  }
+ ],
+ "series": [
+  {
+   "id": "length",
+   "title": "Longest clips reported by notable video models",
+   "unit": "seconds",
+   "log": true,
+   "after": "noise",
+   "caption": "From about one second in 2016 to minutes in 2024. Figures for company models are as reported by the companies.",
+   "points": [
+    {
+     "year": 2016,
+     "value": 1,
+     "label": "VGAN: 32 frames, up to about 1 second"
+    },
+    {
+     "year": 2022,
+     "value": 5.3,
+     "label": "Imagen Video: 128 frames at 24 fps, about 5.3 seconds"
+    },
+    {
+     "year": 2023,
+     "value": 4,
+     "label": "Runway Gen-2: about 4 seconds (reported)"
+    },
+    {
+     "year": 2024,
+     "value": 60,
+     "label": "Sora: up to 1 minute (reported)"
+    },
+    {
+     "year": 2024,
+     "value": 120,
+     "label": "Kling: up to 2 minutes (reported)"
+    }
+   ]
+  },
+  {
+   "id": "pixels",
+   "title": "Pixels in one generated clip",
+   "unit": "pixels",
+   "log": true,
+   "after": "video",
+   "caption": "Width × height × frames. It grew more than 50,000-fold in eight years, which is why video models must compress before they generate.",
+   "points": [
+    {
+     "year": 2016,
+     "value": 131072,
+     "label": "VGAN: 64 × 64 pixels × 32 frames"
+    },
+    {
+     "year": 2022,
+     "value": 125829120,
+     "label": "Imagen Video: 1280 × 768 × 128 frames"
+    },
+    {
+     "year": 2024,
+     "value": 7464960000,
+     "label": "Kling: 1920 × 1080 × 3,600 frames (2 minutes at 30 fps, reported maximum)"
+    }
+   ]
+  }
+ ],
+ "facts": [
+  "At 24 frames per second, one minute of film is 1,440 separate pictures.",
+  "One open video model used about 3.4 million joules to make a 5-second clip, more than 700 times the energy of a high-quality AI image, MIT Technology Review found in 2025.",
+  "A 2025 Hugging Face study found that doubling the length of an AI video roughly quadruples the energy it takes to make.",
+  "HunyuanVideo's autoencoder shrinks each frame 8 times in width and height and 4 times in time, so the model works on about 48 times fewer numbers than the raw video.",
+  "The word \"deepfake\" comes from the username of the Reddit account that posted face-swapped videos in 2017."
+ ],
+ "sources": [
+  {
+   "title": "Eadweard Muybridge",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Eadweard_Muybridge"
+  },
+  {
+   "title": "The Horse in Motion",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/The_Horse_in_Motion"
+  },
+  {
+   "title": "Frame rate",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Frame_rate"
+  },
+  {
+   "title": "Auto-Encoding Variational Bayes (Kingma & Welling, 2013)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/1312.6114"
+  },
+  {
+   "title": "Generative Adversarial Networks (Goodfellow et al., 2014)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/1406.2661"
+  },
+  {
+   "title": "Deep Unsupervised Learning using Nonequilibrium Thermodynamics (Sohl-Dickstein et al., 2015)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/1503.03585"
+  },
+  {
+   "title": "Generating Videos with Scene Dynamics (Vondrick, Pirsiavash & Torralba, 2016)",
+   "publisher": "arXiv / NeurIPS",
+   "url": "https://arxiv.org/abs/1609.02612"
+  },
+  {
+   "title": "Deepfake",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Deepfake"
+  },
+  {
+   "title": "Denoising Diffusion Probabilistic Models (Ho, Jain & Abbeel, 2020)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2006.11239"
+  },
+  {
+   "title": "C2PA founding press release",
+   "publisher": "Coalition for Content Provenance and Authenticity",
+   "url": "https://c2pa.org/c2pa-founding-press-release/"
+  },
+  {
+   "title": "Technology and media entities join forces to create standards group aimed at building trust in online content",
+   "publisher": "Microsoft",
+   "url": "https://news.microsoft.com/source/2021/02/22/technology-and-media-entities-join-forces-to-create-standards-group-aimed-at-building-trust-in-online-content/"
+  },
+  {
+   "title": "High-Resolution Image Synthesis with Latent Diffusion Models (Rombach et al., 2021)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2112.10752"
+  },
+  {
+   "title": "Classifier-Free Diffusion Guidance (Ho & Salimans, 2022)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2207.12598"
+  },
+  {
+   "title": "Video Diffusion Models (Ho et al., 2022)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2204.03458"
+  },
+  {
+   "title": "Stable Diffusion public release",
+   "publisher": "Stability AI",
+   "url": "https://stability.ai/news/stable-diffusion-public-release"
+  },
+  {
+   "title": "Make-A-Video: Text-to-Video Generation without Text-Video Data (Singer et al., 2022)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2209.14792"
+  },
+  {
+   "title": "Imagen Video: High Definition Video Generation with Diffusion Models (Ho et al., 2022)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2210.02303"
+  },
+  {
+   "title": "Scalable Diffusion Models with Transformers (Peebles & Xie, 2022)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2212.09748"
+  },
+  {
+   "title": "Gen-2: Generate novel videos with text, images or video clips",
+   "publisher": "Runway",
+   "url": "https://runway.com/research/gen-2"
+  },
+  {
+   "title": "Runway Gen-2 is the First Publicly Available Text-to-Video Generator",
+   "publisher": "PetaPixel",
+   "url": "https://petapixel.com/2023/03/20/runway-gen-2-is-the-first-publicly-available-text-to-video-generator/"
+  },
+  {
+   "title": "Identifying AI-generated images with SynthID",
+   "publisher": "Google DeepMind",
+   "url": "https://deepmind.google/discover/blog/identifying-ai-generated-images-with-synthid/"
+  },
+  {
+   "title": "MoS Rajeev Chandrasekhar on deepfake video featuring an actor",
+   "publisher": "Business Today",
+   "url": "https://www.businesstoday.in/technology/news/story/more-dangerous-and-damaging-mos-rajeev-chandrasekhar-on-deepfake-video-featuring-pushpa-actor-rashmika-mandanna-404713-2023-11-06"
+  },
+  {
+   "title": "MeitY issues advisory to all intermediaries to comply with existing IT rules",
+   "publisher": "Press Information Bureau, Government of India",
+   "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1990542"
+  },
+  {
+   "title": "MeitY issues advisory against AI-Deepfakes on social media and other platforms",
+   "publisher": "SCC Online",
+   "url": "https://www.scconline.com/blog/post/2023/12/28/meity-issues-advisory-against-ai-deepfakes-on-social-media-legal-news/"
+  },
+  {
+   "title": "MeitY issues advisory on Misinformation and Deepfake mandating unique metadata",
+   "publisher": "SCC Online",
+   "url": "https://www.scconline.com/blog/post/2024/03/07/meity-issues-advisory-on-misinformation-and-deepfake-legal-news/"
+  },
+  {
+   "title": "MeitY Revises AI Advisory, Does Away with Government Permission Requirement",
+   "publisher": "AZB & Partners",
+   "url": "https://www.azbpartners.com/bank/meity-liberalizes-ai-advisory-dated-march-1-2024-following-industry-concerns-and-issues-revised-advisory-on-march-15-2024/"
+  },
+  {
+   "title": "Video generation models as world simulators",
+   "publisher": "OpenAI",
+   "url": "https://openai.com/index/video-generation-models-as-world-simulators/"
+  },
+  {
+   "title": "Sora (text-to-video model)",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Sora_(text-to-video_model)"
+  },
+  {
+   "title": "Google I/O 2024: Introducing Veo and Imagen 3",
+   "publisher": "Google",
+   "url": "https://blog.google/innovation-and-ai/products/google-generative-ai-veo-imagen-3/"
+  },
+  {
+   "title": "Watermarking AI-generated text and video with SynthID",
+   "publisher": "Google DeepMind",
+   "url": "https://deepmind.google/discover/blog/watermarking-ai-generated-text-and-video-with-synthid/"
+  },
+  {
+   "title": "Kuaishou Unveils Proprietary Video Generation Model 'Kling'",
+   "publisher": "Kuaishou Technology",
+   "url": "https://ir.kuaishou.com/news-releases/news-release-details/kuaishou-unveils-proprietary-video-generation-model-kling"
+  },
+  {
+   "title": "What to know about this new Chinese text-to-video AI model",
+   "publisher": "MIT Technology Review",
+   "url": "https://www.technologyreview.com/2024/06/19/1094027/kling-kuaishou-video-ai-china/"
+  },
+  {
+   "title": "Movie Gen: A Cast of Media Foundation Models",
+   "publisher": "Meta AI",
+   "url": "https://ai.meta.com/research/publications/movie-gen-a-cast-of-media-foundation-models/"
+  },
+  {
+   "title": "Sora is here",
+   "publisher": "OpenAI",
+   "url": "https://openai.com/index/sora-is-here/"
+  },
+  {
+   "title": "Veo (text-to-video model)",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Veo_(text-to-video_model)"
+  },
+  {
+   "title": "Sora 2 is here",
+   "publisher": "OpenAI",
+   "url": "https://openai.com/index/sora-2/"
+  },
+  {
+   "title": "Article 50: Transparency Obligations for Providers and Deployers of Certain AI Systems",
+   "publisher": "EU Artificial Intelligence Act (Future of Life Institute)",
+   "url": "https://artificialintelligenceact.eu/article/50/"
+  },
+  {
+   "title": "Measures for Labeling of AI-Generated Synthetic Content",
+   "publisher": "China Law Translate",
+   "url": "https://www.chinalawtranslate.com/en/ai-labeling/"
+  },
+  {
+   "title": "Explanatory note: draft amendments on synthetically generated information (22 October 2025)",
+   "publisher": "Ministry of Electronics and Information Technology, Government of India",
+   "url": "https://www.meity.gov.in/static/uploads/2025/10/8e40cdd134cd92dd783a37556428c370.pdf"
+  },
+  {
+   "title": "Unpacking the Draft IT Rules on Synthetic Information",
+   "publisher": "MediaNama",
+   "url": "https://www.medianama.com/2025/10/223-unpacking-draft-it-amendment-rules-synthetic-information/"
+  },
+  {
+   "title": "We did the math on AI's energy footprint",
+   "publisher": "MIT Technology Review",
+   "url": "https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/"
+  },
+  {
+   "title": "Video Killed the Energy Budget: Characterizing the Latency and Power Regimes of Open Text-to-Video Models (Delavande, Pierrard & Luccioni, 2025)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2509.19222"
+  },
+  {
+   "title": "Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Amendment Rules, 2026",
+   "publisher": "Ministry of Electronics and Information Technology, Government of India",
+   "url": "https://www.meity.gov.in/static/uploads/2026/02/550681ab908f8afb135b0ad42816a1c9.pdf"
+  },
+  {
+   "title": "Government sets 3-hour deadline for social media platforms to take down AI-generated deepfake content",
+   "publisher": "All India Radio News",
+   "url": "https://www.newsonair.gov.in/government-sets-3-hour-deadline-for-social-media-platforms-to-take-down-ai-generated-deepfake-content"
+  },
+  {
+   "title": "MeitY notifies the IT Amendment Rules 2026",
+   "publisher": "Khaitan & Co",
+   "url": "https://www.khaitanco.com/thought-leadership/MeitY-notifies-the-IT-Amendment-Rules-2026"
+  },
+  {
+   "title": "OpenAI's Sora app is shutting down",
+   "publisher": "TechCrunch",
+   "url": "https://techcrunch.com/2026/03/24/openais-sora-was-the-creepiest-app-on-your-phone-now-its-shutting-down/"
+  },
+  {
+   "title": "HunyuanVideo: A Systematic Framework For Large Video Generative Models (Tencent, 2024)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2412.03603"
+  },
+  {
+   "title": "CogVideoX: Text-to-Video Diffusion Models with An Expert Transformer (Yang et al., 2024)",
+   "publisher": "arXiv",
+   "url": "https://arxiv.org/abs/2408.06072"
+  },
+  {
+   "title": "What to know about the Sora discontinuation",
+   "publisher": "OpenAI Help Center",
+   "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+  },
+  {
+   "title": "Devi Parikh",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Devi_Parikh"
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+  "slug": "videomodelclear",
+  "box": 79,
+  "date": "2026-10-01",
+  "title": "VideoModelClear",
+  "question": "How do AI video models work?",
+  "hook": "Every AI video starts as pure static. Watch a real diffusion model pull a picture out of noise in your browser, steer it with a prompt, see why frames flicker when they are made one at a time, and test whether a hidden watermark survives an edit.",
+  "thumbText": "HOW AI VIDEO WORKS",
+  "field": "ai",
+  "minutes": 20,
+  "tags": [
+    "AI video",
+    "text-to-video",
+    "video generation",
+    "generative AI",
+    "diffusion model",
+    "denoising",
+    "DDPM",
+    "DDIM",
+    "noise",
+    "frames",
+    "frame rate",
+    "24 fps",
+    "space-time",
+    "latent space",
+    "autoencoder",
+    "VAE",
+    "latent diffusion",
+    "Stable Diffusion",
+    "patches",
+    "spacetime patches",
+    "tokens",
+    "transformer",
+    "diffusion transformer",
+    "attention",
+    "prompt",
+    "text encoder",
+    "classifier-free guidance",
+    "guidance scale",
+    "seed",
+    "temporal consistency",
+    "flicker",
+    "memorisation",
+    "Sora",
+    "Veo",
+    "Runway",
+    "Kling",
+    "deepfake",
+    "consent",
+    "watermark",
+    "SynthID",
+    "C2PA",
+    "content credentials",
+    "provenance",
+    "IT Rules 2026",
+    "MeitY",
+    "AI energy use",
+    "previs",
+    "AI literacy",
+    "three.js"
+  ],
+  "explainer": [
+    {
+      "title": "A video is a huge stack of numbers",
+      "text": "Frames stacked over time make a space-time cube. One second of Full HD at 24 fps is about 149 million numbers, millions of times more than the text you read in that second. A video model has to decide all of them."
+    },
+    {
+      "title": "Diffusion: noise in, picture out",
+      "text": "Models learn to guess the clean picture hidden under noise. To create, they start from pure static, guess, remove a little noise and repeat, 20 to 50 times. Our toy does it for real with an exact denoiser, which is why it can only copy its 288 pictures; real networks approximate and so can blend."
+    },
+    {
+      "title": "Squeeze, then cut into patches",
+      "text": "An autoencoder squeezes video into a small latent cube, about 48 times smaller in open models. The cube is cut into space-time patches that act as tokens, and a transformer lets every patch attend to every other one. Attention cost grows with tokens squared."
+    },
+    {
+      "title": "Words steer every step",
+      "text": "A text encoder turns the prompt into numbers the denoiser reads. Classifier-free guidance mixes a guess made with the prompt and one without: guess = without + w × (with − without). At w = 0 the prompt is ignored; higher obeys more but loses variety."
+    },
+    {
+      "title": "Consistency is the hard part",
+      "text": "Make each frame alone and the object teleports and changes colour. Denoise the whole clip as one block and motion comes out smooth. Real models still slip on physics, hands and objects that appear from nowhere, because they learn patterns, not rules."
+    },
+    {
+      "title": "Costly, and easy to mistake for real",
+      "text": "A 5-second clip took about 3.4 million joules in 2025 tests of open models, far more than a picture or a text reply. Deepfakes without consent cause real harm. Watermarks and content credentials help but can be weakened or stripped, and India's 2026 IT Rules require labels."
+    }
+  ],
+  "concepts": [
+    {
+      "term": "Frame",
+      "def": "One still picture in a video; cinema shows 24 every second."
+    },
+    {
+      "term": "Diffusion model",
+      "def": "A generator that starts from random noise and removes it step by step to reveal a picture or video."
+    },
+    {
+      "term": "Denoiser",
+      "def": "The trained network that guesses the clean picture from a noisy one."
+    },
+    {
+      "term": "Latent",
+      "def": "A compressed version of the video, made by an autoencoder, that the model actually works on."
+    },
+    {
+      "term": "Space-time patch",
+      "def": "A small block of the latent cube, a few cells wide and a few frames long, used as one token."
+    },
+    {
+      "term": "Attention",
+      "def": "Each token scores every other token and takes a weighted mix of their information."
+    },
+    {
+      "term": "Classifier-free guidance",
+      "def": "Pushing each step further towards the prompt by mixing guesses made with and without it."
+    },
+    {
+      "term": "Temporal consistency",
+      "def": "Objects staying the same from frame to frame unless they should change."
+    },
+    {
+      "term": "Content credentials",
+      "def": "A signed record attached to a file saying how it was made and edited (the C2PA standard)."
+    }
+  ],
+  "links": {},
+  "storage": [
+    {
+      "key": "videomodelclear.v1",
+      "what": "Which chapters you have opened, your best quiz scores, and sound on or off."
+    }
+  ],
+  "credits": [
+    {
+      "name": "three.js",
+      "license": "MIT",
+      "url": "https://threejs.org"
+    },
+    {
+      "name": "Geist, Instrument Serif",
+      "license": "SIL OFL 1.1",
+      "url": "https://openfontlicense.org"
+    }
+  ]
+}

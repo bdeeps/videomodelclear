@@ -1,0 +1,126 @@
+{
+  "slug": "videomodelclear",
+  "box": 79,
+  "question": "How do AI video models work?",
+  "url": "https://glassbox-production-fd52.up.railway.app/e/videomodelclear/",
+  "app": "https://glassbox-production-fd52.up.railway.app/videomodelclear/",
+  "assets": {
+    "reel": "reel.mp4",
+    "video": "video.mp4",
+    "cover": "cover.jpg",
+    "thumb": "thumb.jpg",
+    "still": "still.jpg",
+    "historyReel": "history-reel.mp4",
+    "historySlides": [
+      "history-slide-1.jpg",
+      "history-slide-2.jpg",
+      "history-slide-3.jpg",
+      "history-slide-4.jpg",
+      "history-slide-5.jpg",
+      "history-slide-6.jpg",
+      "history-slide-7.jpg",
+      "history-slide-8.jpg",
+      "history-slide-9.jpg",
+      "history-slide-10.jpg"
+    ],
+    "slides": [
+      "slide-1.jpg",
+      "slide-2.jpg",
+      "slide-3.jpg",
+      "slide-4.jpg",
+      "slide-5.jpg",
+      "slide-6.jpg",
+      "slide-7.jpg",
+      "slide-8.jpg",
+      "slide-9.jpg",
+      "slide-10.jpg"
+    ]
+  },
+  "captions": {
+    "history": {
+      "instagram": "From a row of cameras photographing a galloping horse in 1878 to models that turn a sentence into a talking film clip, and the rules that followed.\n\n1878: A galloping horse, frame by frame\n2014: Two networks play a game\n2016: The first tiny AI videos\n2020: Diffusion finally works\n2022: Stable Diffusion is released openly\n2023: India warns platforms about deepfakes\n\nThe full story, with 30 moments, sources and charts: glassbox-production-fd52.up.railway.app/e/videomodelclear/history (link in bio)\n\nThen play with how it works: glassbox-production-fd52.up.railway.app/videomodelclear\n\n#glassbox #howitworks #explained #learnoninstagram #stem #opensource #aivideo #texttovideo #videogeneration #generativeai #diffusionmodel #denoising #history",
+      "youtube": {
+        "title": "The history of AI video models in 45 seconds #shorts",
+        "description": "From a row of cameras photographing a galloping horse in 1878 to models that turn a sentence into a talking film clip, and the rules that followed.\n\n1878 · A galloping horse, frame by frame (Eadweard Muybridge)\n2014 · Two networks play a game (Ian Goodfellow and colleagues)\n2016 · The first tiny AI videos (Carl Vondrick, Hamed Pirsiavash and Antonio Torralba)\n2020 · Diffusion finally works (Jonathan Ho, Ajay Jain and Pieter Abbeel)\n2022 · Stable Diffusion is released openly (Stability AI, CompVis at LMU Munich and Runway)\n2023 · India warns platforms about deepfakes (Ministry of Electronics and Information Technology (MeitY))\n\n▶ Full history: https://glassbox-production-fd52.up.railway.app/e/videomodelclear/history/\n▶ Play with it: https://glassbox-production-fd52.up.railway.app/e/videomodelclear/\n\n#glassbox #howitworks #explained #history"
+      }
+    },
+    "instagram": "How do AI video models work?\n\nEvery AI video starts as pure static. Watch a real diffusion model pull a picture out of noise in your browser, steer it with a prompt, see why frames flicker when they are made one at a time, and test whether a hidden watermark survives an edit.\n\n→ A video is a stack of still pictures: 24 of them every second in cinema.\n→ One second of Full HD is about 149 million numbers. Text is a few words.\n→ Diffusion starts from pure static, guesses the picture, removes a little noise, and repeats.\n→ Models first squeeze video into a small latent cube, then cut it into space-time patches.\n→ A prompt steers every denoising step. Here: \"a blue square\".\n\nPlay with it yourself. It's free and open source: glassbox-production-fd52.up.railway.app/videomodelclear (link in bio)\n\nBox No. 079 of 365. Follow @glassbox.how for a new \"how it works\" every day.\n\n#glassbox #howitworks #explained #learnoninstagram #stem #opensource #aivideo #texttovideo #videogeneration #generativeai #diffusionmodel #denoising #ddpm #ddim #noise",
+    "carousel": "Swipe through: How do AI video models work?\n\nEvery AI video starts as pure static. Watch a real diffusion model pull a picture out of noise in your browser, steer it with a prompt, see why frames flicker when they are made one at a time, and test whether a hidden watermark survives an edit.\n\nSave this for later, then play with the interactive version at glassbox-production-fd52.up.railway.app/videomodelclear (link in bio).\n\nBox No. 079 · @glassbox.how\n\n#glassbox #howitworks #explained #learnoninstagram #stem #opensource #aivideo #texttovideo #videogeneration #generativeai #diffusionmodel #denoising",
+    "youtube": {
+      "title": "How do AI video models work? #shorts",
+      "description": "Every AI video starts as pure static. Watch a real diffusion model pull a picture out of noise in your browser, steer it with a prompt, see why frames flicker when they are made one at a time, and test whether a hidden watermark survives an edit.\n\n▶ Play with it: https://glassbox-production-fd52.up.railway.app/e/videomodelclear/\n⌘ Source code (MIT): https://github.com/bdeeps/videomodelclear\n\nBox No. 079 of 365 from Glassbox: one open-source interactive explainer every day.\n\n#glassbox #howitworks #explained"
+    },
+    "youtubeLong": {
+      "title": "How do AI video models work? (interactive explainer)",
+      "description": "Every AI video starts as pure static. Watch a real diffusion model pull a picture out of noise in your browser, steer it with a prompt, see why frames flicker when they are made one at a time, and test whether a hidden watermark survives an edit.\n\n▶ Play with the interactive version: https://glassbox-production-fd52.up.railway.app/e/videomodelclear/\n⌘ Source code (MIT): https://github.com/bdeeps/videomodelclear\n\nIn this video:\n• A video is a huge stack of numbers. Frames stacked over time make a space-time cube.\n• Diffusion: noise in, picture out. Models learn to guess the clean picture hidden under noise.\n• Squeeze, then cut into patches. An autoencoder squeezes video into a small latent cube, about 48 times smaller in open models.\n• Words steer every step. A text encoder turns the prompt into numbers the denoiser reads.\n• Consistency is the hard part. Make each frame alone and the object teleports and changes colour.\n• Costly, and easy to mistake for real. A 5-second clip took about 3.4 million joules in 2025 tests of open models, far more than a picture or a text reply.\n\nGlassbox opens one box a day: an interactive model of how something works, plus the code behind it.\n\n#glassbox #howitworks #explained #learnoninstagram #stem"
+    },
+    "short": "How do AI video models work?\n\nEvery AI video starts as pure static.\n\nPlay with it: https://glassbox-production-fd52.up.railway.app/e/videomodelclear/",
+    "linkedin": "How do AI video models work?\n\nEvery AI video starts as pure static. Watch a real diffusion model pull a picture out of noise in your browser, steer it with a prompt, see why frames flicker when they are made one at a time, and test whether a hidden watermark survives an edit.\n\n1. A video is a huge stack of numbers\n2. Diffusion: noise in, picture out\n3. Squeeze, then cut into patches\n4. Words steer every step\n5. Consistency is the hard part\n6. Costly, and easy to mistake for real\n\nI built an interactive, open-source explainer so you can pull the levers yourself. It's box No. 079 in my one-a-day project, Glassbox.\n\nTry it: https://glassbox-production-fd52.up.railway.app/e/videomodelclear/\nCode: https://github.com/bdeeps/videomodelclear\n\n#glassbox #howitworks #explained #learnoninstagram #stem"
+  },
+  "schedule": {
+    "at": "2026-09-28T13:00:00.000Z"
+  },
+  "targets": [
+    {
+      "service": "instagram",
+      "kind": "reel",
+      "enabled": true
+    },
+    {
+      "service": "instagram",
+      "kind": "carousel",
+      "offsetHours": 4,
+      "enabled": true
+    },
+    {
+      "service": "youtube",
+      "kind": "short",
+      "enabled": true
+    },
+    {
+      "service": "youtube",
+      "kind": "video",
+      "enabled": true
+    },
+    {
+      "service": "linkedin",
+      "kind": "video",
+      "enabled": true
+    },
+    {
+      "service": "twitter",
+      "kind": "video",
+      "enabled": true
+    },
+    {
+      "service": "threads",
+      "kind": "video",
+      "enabled": true
+    },
+    {
+      "service": "tiktok",
+      "kind": "video",
+      "enabled": true
+    },
+    {
+      "service": "instagram",
+      "kind": "history-reel",
+      "offsetHours": 2,
+      "enabled": false
+    },
+    {
+      "service": "youtube",
+      "kind": "history-short",
+      "offsetHours": 2,
+      "enabled": false
+    },
+    {
+      "service": "instagram",
+      "kind": "history-carousel",
+      "offsetHours": 6,
+      "enabled": false
+    }
+  ],
+  "thumbnailOffsetMs": 1200,
+  "updatedAt": "2026-09-28T06:36:22.894Z"
+}
